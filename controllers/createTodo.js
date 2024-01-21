@@ -2,6 +2,7 @@ const Todo = require("../models/Todo");
 
 exports.createTodo = async (req,res)=>{
     try {
+        //when we did a call on postman then we hit the url so then he created.
         const {title, description} = req.body;
         const tododata =  await Todo.create({
             title,description
